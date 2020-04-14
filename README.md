@@ -1,7 +1,7 @@
 # GmodE2VR Created By Mee
 
 A VR simulator made using E2 in Garry's Mod 
-Open the txt file to see the code and insert the code into the E2 editer.
+Open the txt file to see the code and insert the code into the E2 editor.
 
 Here is the creator of the dupe and the code. Check him out!
 Creator: https://steamcommunity.com/id/tinyssteampage
