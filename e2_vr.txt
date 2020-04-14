@@ -1,0 +1,23 @@
+@name VR demo
+@persist Player:entity #Gotta define your varibles!
+
+Player = findPlayerByName("mee") #the person that you want to be in vr, using names
+
+holoCreate(1) #First hologram, this is the one that blinds the player
+holoScale(1,vec(-7)) #scale, I like 7, must be negitive because it needs to be flipped
+holoPos(1,Player:attachmentPos("eyes")) #puts the holo at the players eye position
+holoParentAttachment(1,Player,"eyes") #parents it to the eyes
+holoDisableShading(1,1) #self explainatory, just removes shading
+holoVisible(1,players(),0) #a special function that makes a holo only visible to who you define, players() is everyone in the server
+holoModel(1,"hq_sphere") #I like hq_sphere as the model, then it doesnt clip into ground
+holoVisible(1,Player,1) #another visible function, sets it visible for the Player
+
+holoCreate(2) #second holo
+holoScale(2,vec(16,16,0.1)) #scale of the plane, I chose 16 wide and 0.1 thick, anything bigger breaks it and makes it invisible for some reason
+holoMaterial(2,"debug/debugportals") #the special material that can be seen through walls
+holoColor(2,vec(0)) #color of the plate
+holoPos(2,Player:pos()) #sets to player's position, not needed but its there anyway
+holoVisible(2,players(),0) #same as above, sets everyones visibility to this holo to 0
+holoVisible(2,Player,1) #sets the Player visibility to 1, so they can see it
+
+#Made by Mee
